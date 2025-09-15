@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace GameEstrategia
 {
-    public class EstructuraMantenimiento : Estructura
+    public class EstructuraRecoleccion : Estructura
     {
-        private int bonus;
-        public EstructuraMantenimiento(string nombre, int precio, int vida, int bonus, Bando bando)
+        private int cantidadPorTurno;
+        public EstructuraRecoleccion(string nombre, int precio, int vida, int cantidad, Bando bando)
             : base(nombre, precio, vida, 0, bando)
         {
-            this.bonus = bonus;
+            this.cantidadPorTurno = cantidad;
         }
 
         public override void AccionPorTurno(Juego juego, Nodo nodo)
         {
             if (this.EstaVivo())
             {
-                juego.ModificarLimiteConstruccion(this.bonus);
+                juego.RegistrarIngresoDinero(this.cantidadPorTurno);
             }
         }
     }

@@ -8,12 +8,8 @@ namespace GameEstrategia
 {
     public class EstructuraDefensa : Estructura
     {
-        private int alcance;
-        public EstructuraDefensa(string nombre, int precio, int vida, int danio, int alcance, Bando bando)
-            : base(nombre, precio, vida, danio, bando)
-        {
-            this.alcance = alcance;
-        }
+        public EstructuraDefensa(string nombre, int precio, int vida, int danio, Bando bando)
+             : base(nombre, precio, vida, danio, bando) { }
 
         public override void AccionPorTurno(Juego juego, Nodo nodo)
         {
@@ -23,7 +19,6 @@ namespace GameEstrategia
                 if (objetivo != null)
                 {
                     objetivo.RecibirDanio(this.Danio);
-                    juego.AgregarHistorial(string.Format("Estructura {0} atacó a {1} por {2} daño.", this.Nombre, objetivo.Nombre, this.Danio));
                 }
             }
         }

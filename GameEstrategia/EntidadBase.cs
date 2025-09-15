@@ -28,15 +28,9 @@ namespace GameEstrategia
 
         public virtual void RecibirDanio(int danio)
         {
-            if (danio < 0)
-            {
-                throw new ArgumentException("El daño no puede ser negativo");
-            }
-            this.Vida = this.Vida - danio;
-            if (this.Vida < 0)
-            {
-                this.Vida = 0;
-            }
+            if (danio < 0) throw new ArgumentException("El daño no puede ser negativo");
+            this.Vida -= danio;
+            if (this.Vida < 0) this.Vida = 0;
         }
 
         public override string ToString()
