@@ -19,7 +19,6 @@ namespace GameEstrategia
         {
             if (this.EstaVivo())
             {
-                // Busca un objetivo enemigo en este nodo con prioridad: unidades, estructuras defensa, estructuras mantenimiento.
                 EntidadBase objetivo = nodo.ObtenerObjetivoPara(this.Bando);
                 if (objetivo != null)
                 {
