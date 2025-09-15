@@ -20,10 +20,5 @@ namespace GameEstrategia
 
         public abstract bool PuedeAtacarA(Unidad objetivo);
 
-        public virtual void EjecutarTurno(Juego juego, Nodo nodoActual)
-        {
-           
-        }
     }
-
 }

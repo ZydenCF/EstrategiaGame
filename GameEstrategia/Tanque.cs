@@ -8,14 +8,7 @@ namespace GameEstrategia
 {
     public class Tanque : Unidad
     {
-        public Tanque(Bando bando)
-            : base("Tanque", 150, 200, 40, 2, bando) { }
-
-        public override bool PuedeAtacarA(Unidad objetivo)
-        {
-            if (objetivo == null) return false;
-
-            return (objetivo is Soldado);
-        }
+        public Tanque(Bando bando) : base("Tanque", 150, 200, 40, 2, bando) { }
+        public override bool PuedeAtacarA(Unidad objetivo) { return objetivo is Soldado; }
     }
 }

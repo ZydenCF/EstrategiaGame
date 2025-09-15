@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace GameEstrategia
 {
-    internal interface ICombatiente
+    public interface ICombatiente
     {
         string Nombre { get; }
-        int Vida { get; set; }
-        int Daño { get; }
-        bool EstaVivo { get; }
-
-        void RecibirDaño(int daño);
+        int Vida { get; }
+        int Danio { get; }
+        Bando Bando { get; }
+        bool EstaVivo();
+        void RecibirDanio(int danio);
     }
 }
