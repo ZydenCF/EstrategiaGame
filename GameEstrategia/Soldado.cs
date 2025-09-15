@@ -11,6 +11,7 @@ namespace GameEstrategia
         public Soldado(Bando bando)
             : base("Soldado", 50, 100, 25, 1, bando) { }
 
+
         public override bool PuedeAtacarA(Unidad objetivo)
         {
             if (objetivo == null) return false;
