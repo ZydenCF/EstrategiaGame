@@ -12,6 +12,7 @@ namespace GameEstrategia
         int Vida { get; set; }
         int Daño { get; }
         bool EstaVivo { get; }
+
         void RecibirDaño(int daño);
     }
 }
